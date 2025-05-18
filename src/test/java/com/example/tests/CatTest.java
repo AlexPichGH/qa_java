@@ -46,7 +46,7 @@ public class CatTest {
         );
     }
 
-    // проверяем, что метод в getFood() класса Cat пробрасывается исключение метода eatMeat() класса Feline
+    // проверяем, что в метод getFood() класса Cat пробрасывается исключение метода eatMeat() класса Feline
     @Test
     public void getFoodThrowsExceptionWhenFelineThrowsExceptionTest() throws Exception {
         Mockito.when(mockFeline.eatMeat()).thenThrow(new Exception("Ошибка при получении еды"));
