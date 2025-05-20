@@ -36,13 +36,23 @@ public class LionTest {
     // проверяем, что метод getKittens() класса Lion возвращает 1
     @Test
     public void getKittensReturnOneTest() {
-        Assert.assertEquals(1, lion.getKittens());
+        int expectedValue = 1;
+        Assert.assertEquals(
+                String.format("Метод getKittens() должен возвращать '%d'", expectedValue),
+                expectedValue,
+                lion.getKittens()
+        );
     }
 
     // проверяем, что метод getFood() класса Lion возвращает ожидаемый список животных
     @Test
     public void getFoodReturnFoodListFromFelineTest() throws Exception {
-        Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
+        List<String> expectedList = List.of("Животные", "Птицы", "Рыба");
+        Assert.assertEquals(
+                String.format("Метод getFood() должен возвращать %s", expectedList),
+                expectedList,
+                lion.getFood()
+        );
     }
 
     // проверяем, что в метод getFood() класса Lion пробрасывается исключение метода eatMeat() класса Feline

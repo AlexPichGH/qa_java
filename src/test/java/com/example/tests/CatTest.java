@@ -26,10 +26,11 @@ public class CatTest {
 
     // проверяем, что метод getSound() класса Cat возвращает "Мяу"
     @Test
-    public void getSoundReturnExpectedCatSoundTest() {
+    public void getSoundReturnMeowTest() {
+        String expectedValue = "Мяу";
         Assert.assertEquals(
-                "Метод getSound() должен возвращать ожидаемый звук",
-                "Мяу",
+                String.format("Метод getSound() должен возвращать '%s'", expectedValue),
+                expectedValue,
                 cat.getSound()
         );
     }
