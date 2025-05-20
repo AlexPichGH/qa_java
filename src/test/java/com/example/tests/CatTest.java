@@ -35,9 +35,9 @@ public class CatTest {
         );
     }
 
-    // проверяем, что метод getFood() класса Cat возвращает ожидаемый список животных
+    // проверяем, что метод getFood() класса Cat возвращает список еды хищника
     @Test
-    public void getFoodReturnFoodListFromFelineTest() throws Exception {
+    public void getFoodReturnPredatorFoodListTest() throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(mockFeline.eatMeat()).thenReturn(expectedFood);
         Assert.assertEquals(

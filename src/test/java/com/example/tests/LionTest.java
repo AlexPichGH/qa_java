@@ -44,9 +44,9 @@ public class LionTest {
         );
     }
 
-    // проверяем, что метод getFood() класса Lion возвращает ожидаемый список животных
+    // проверяем, что метод getFood() класса Lion возвращает список еды хищника
     @Test
-    public void getFoodReturnFoodListFromFelineTest() throws Exception {
+    public void getFoodReturnPredatorFoodListTest() throws Exception {
         List<String> expectedList = List.of("Животные", "Птицы", "Рыба");
         Assert.assertEquals(
                 String.format("Метод getFood() должен возвращать %s", expectedList),
